@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <!--sync和前面学的emit一样，是一个简便的写法-->
+    parent : {{money}}
+    <!--<child :money="money" @update:m="val => this.money=val"></child>-->
+    <!--语法糖-->
+    <child :money="money" :m.sync="money"></child>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            money: 400
+        },
+        components: {
+            child: {
+                props: ['money'],
+                template: `<div>child: {{money}} <button @click="getMoney">多点</button></div>`,
+                methods: {
+                    getMoney() {
+                        this.$emit('update:m',800); //触发自定义事件，让父组件的方法执行。
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

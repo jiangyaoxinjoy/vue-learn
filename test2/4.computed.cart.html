@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<style>
+    caption{
+        caption-side: top;
+    }
+    .productCover{
+        float: left;
+    }
+</style>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="row">
+            <table class="table table-bordered">
+                <caption class="h3 text-capitalize text-center">List of users</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            <!--selectAll读取数据就会调用selectAll的get方法-->
+                            <input type="checkbox" v-model="selectAll">全选
+                        </th>
+                        <th scope="col">商品</th>
+                        <th scope="col">单价</th>
+                        <th scope="col">数量</th>
+                        <th scope="col">小计</th>
+                        <th scope="col">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(product,index) in products">
+                    <td><input type="checkbox" v-model="product.isSelected" ></td>
+                    <td>
+                        <img class="productCover" :src="product.productCover" :alt="product.productName">
+                        <p>{{product.productName}}</p>
+                    </td>
+                    <td>{{product.productPrice}}</td>
+                    <td>
+                        <input type="number" v-model.number="product.productCount" min="1">
+                    </td>
+                    <td>
+                        {{product.productCount * product.productPrice | toFixed(2)}}
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger" @click="deleteProduct(product)">删除</button>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6">总价格： {{totalSum | toFixed(2)}}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="../node_modules/axios/dist/axios.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            products: [],
+            // selectAll: false
+        },
+        created() {
+            this.getData();
+        },
+        methods: {
+            getData() {
+                axios.get('./data/carts.json').then( res => {
+                    this.products = res.data;
+                }, err => {
+                    console.log(err)
+                });
+            },
+            deleteProduct(p) {
+                this.products = this.products.filter( (item) => item !== p);
+            }
+        },
+        //computed计算属性和Object.defineProperty类似。
+        //当给全选赋值是，要影响其他数据的变化，当页面刷新是，获取全选值，根据下面的checkbox计算出来的结果给全选赋值
+        // 所以selectAll不能放在data里，而是一个计算出来的结果，定义在computed。
+        computed:{ //放在computed中最后也会挂载到vm上，所有不能喝methods，data重名。
+            selectAll: { //get和set中this指向vm实例
+                get(){ //v-model会获取selectAll的值，所有会调用get方法
+                    return this.products.every( item => item.isSelected);
+                },
+                set(val) {
+                    this.products.map( item => item.isSelected = val);
+                }
+            },
+            //计算属性写成函数，默认就是get方法。
+            //没有set的时候可以直接写成函数。
+            totalSum() {
+                const reducer = (total,current) => {
+                    if(!current.isSelected) return total;
+                    return total + current.productPrice * current.productCount
+                };
+                return this.products.reduce(reducer,0)
+            }
+            /*
+            totalSum: { //结果会被缓存，如果依赖的数据没有发生变化，就不会重新执行。
+                get() {
+                    const reducer = (total,current) => {
+                        if(!current.isSelected) return total;
+                        return total + current.productPrice * current.productCount
+                    };
+                    return this.products.reduce(reducer,0)
+                }
+            }*/
+        },
+        filters: {
+            toFixed(val,param1){
+                return '￥'+ val.toFixed(param1);
+            }
+        }
+    });
+</script>
+</body>
+</html>

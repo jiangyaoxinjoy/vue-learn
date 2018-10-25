@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--前后端分离-->
+    <!--前端不依赖后端跳转页面，后端提供接口供前端调用，跳转前端自己处理-->
+    <!--router-view是一个全局组件，可以自己使用。路由匹配成功，就要内容插入到router-view里面-->
+
+   <!--这种导航的写法只局限于hash模式，不推荐使用-->
+    <!--<a href="#/home">home</a>-->
+    <!--<a href="#/list">list</a>-->
+
+    <!--router-link是一个全局组件 自动判断hash和h5模式-->
+    <!--tag 路由的标签 默认a标签-->
+    <!--声明式导航-->
+    <!--:to 后面的对象字符串里面可以拼接变量 比较灵活 适合动态的路由-->
+    <router-link :to="{path:'/home'}" tag="button">home</router-link>
+    <!--to 只可以放字符串-->
+    <router-link to="/home" tag="button">home</router-link>
+    <router-link to="/list" tag="button">list</router-link>
+    <router-view></router-view>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script type="text/javascript">
+    let home= {
+        template: `<div>home</div>`
+    };
+    let list = {
+        template: `<div>list</div>`
+    };
+    /**
+     * routes
+     * 路由的映射表，配置路由和组件的关系(什么路径对应什么组件)
+     */
+    let routes = [
+        {path: '/home',component: home}, //配置的关系是页面级组件
+        {path: '/list',component: list}
+    ];
+    /**
+     *  new VueRoute
+     * routes,路由表
+     */
+    let router = new VueRouter({  //引入vue-router自带一个VueRouter类
+        // mode:'history', //history浏览器自带的历史管理，默认是hash的。history.pushState('','','/home')
+        // routes:routes名字一样可以简写
+        routes,
+        //更改默认的类名
+        linkActiveClass: 'active', //默认是router-link-active
+    })
+
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        router
+    });
+</script>
+</body>
+</html>

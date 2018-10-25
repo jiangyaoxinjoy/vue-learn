@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <!--所有绑定的方法都是window上的，全局的-->
+    <!--为什么fn要加括号。因为div点击执行onclick(event)函数，fn没有括号不会执行-->
+    <!--<div onclick="fn()" id="btn">点我啊</div>-->
+
+    <!-- v-on === @ -->
+    <!--如果不传递参数则fn不用写括号，fn会自动传入事件源-->
+    <!--如果写括号了要手动传入$event属性-->
+    <div @click="fn1">点我啊1</div>
+    <div @click="fn($event,msg)">点我啊</div>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    /*
+    function  fn() {
+        console.log('1')
+    };
+    console.log(document.getElementById('btn').onclick);
+    (function () {
+        function  fn() {
+            console.log('1')
+        }
+    })();
+    */
+    let vm = new Vue({ //vm根实例
+        el: '#app',
+        //fn也可以放到data里，但为了方便放到methods里
+        data: {msg:1}, //都是数据
+        methods: { //methods和data的全部数据都会放到vm上，而且命名不能重复。
+            fn(event,msg) {
+                console.log(msg)
+                console.log(event)
+            },
+            fn1(event) {
+                console.log(this.msg) //methods中的this指向都是vm实例
+                console.log(event)
+            }
+            // fn:() => console.log(this.msg) //使用methods里面不能用箭头函数
+        }
+    });
+</script>
+</body>
+</html>

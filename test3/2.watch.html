@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="a" >{{msg}}
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            a: '',
+            msg: ''
+        },
+        watch: { //只有值变化的时候才会触发
+            a(newVal,oldVal) { //watch的属性名和被观察的值的名字一样。
+                this.msg = '....'; // 设置中间状态，等待结果
+               setTimeout( () => { //watch支持异步
+                   if(newVal.length > 6) {
+                       //这里的return不是返回值，而是结束操作，不往下走。
+                       return this.msg = '太多了';
+                   }
+                   if(newVal.length < 3) {
+                       return this.msg = '太少了';
+                   }
+                   this.msg = '正好';
+               },1540);
+            }
+        }
+    });
+</script>
+</body>
+</html>

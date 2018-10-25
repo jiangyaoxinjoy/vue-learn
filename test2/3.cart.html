@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<style>
+    caption{
+        caption-side: top;
+    }
+    .productCover{
+        float: left;
+    }
+</style>
+<body>
+<div id="app">
+    <!--bootstrap 栅格化布局 默认12列(有一些框架可能是24列)-->
+    <!--常见的样式 + 增强样式-->
+    <!--default灰色 success绿色 danger红色 warning警告色 info浅蓝色 primary 蓝色 -->
+    <!--vue的ui框架 iView，mintui(移动端的)，elementui-->
+    <div class="container">
+        <!--每一行拥有12列-->
+        <div class="row">
+            <table class="table table-bordered">
+                <caption class="h3 text-capitalize text-center">List of users</caption>
+                <thead>
+                    <tr>
+                        <th>
+                            <!--@click点击时 checkbox的状态还没有改变，拿到的selectAll值是相反的，所有用@change事件,值变化后调用函数。-->
+                            <input type="checkbox" v-model="selectAll" @change="selectAllFn">全选
+                        </th>
+                        <th scope="col">商品</th>
+                        <th scope="col">单价</th>
+                        <th scope="col">数量</th>
+                        <th scope="col">小计</th>
+                        <th scope="col">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(product,index) in products">
+                    <td><input type="checkbox" v-model="product.isSelected" @change="subSelectFn"></td>
+                    <td>
+                        <!--:和v-bind等价，动态绑定指令-->
+                        <img class="productCover" :src="product.productCover" :alt="product.productName">
+                        <p>{{product.productName}}</p>
+                    </td>
+                    <td>{{product.productPrice}}</td>
+                    <td>
+                        <!--.number是让输入框的值变成number类型，.lazy当输入框失去焦点时更新-->
+                        <input type="number" v-model.number="product.productCount" min="1">
+                    </td>
+                    <td>
+                        <!--过滤器，不改变原数据，改变数据显示效果 管道符-->
+                        {{product.productCount * product.productPrice | toFixed(2)}}
+                    </td>
+                    <td>
+                        <!--参数product，是把product对象复制一份（可以看成一个地址）-->
+                        <button type="button" class="btn btn-danger" @click="deleteProduct(product)">删除</button>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <!--totalSum() 数据变化就会重新调用此函数计算结果，不会调用上一次缓存数据，性能不好-->
+                        <!--computed可以解决这个问题-->
+                        <td colspan="6">总价格： {{totalSum() | toFixed(2)}}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<!--axios基于promise，不依赖vue-->
+<script type="text/javascript" src="../node_modules/axios/dist/axios.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            products: [],
+            selectAll: false
+        },
+        //created专门用来发送ajax请求
+        created() {
+            this.getData();
+        },
+        methods: {
+            getData() {
+                //axios里面使用箭头函数，如果不用，this的指向就不是vm了。
+                axios.get('./data/carts.json').then( res => {
+                    this.products = res.data;
+                    this.subSelectFn();
+                }, err => {
+                    console.log(err)
+                });
+            },
+            deleteProduct(p) {
+                //splice会造成数组塌陷。filter性能比较好
+                this.products = this.products.filter( (item) => item !== p);
+            },
+            selectAllFn() {
+                this.products.map( item => item.isSelected = this.selectAll);
+            },
+            subSelectFn() {
+                this.selectAll = this.products.every( item => item.isSelected == true)
+            },
+            totalSum() {
+                const reducer = (total,current) => {
+                    if(!current.isSelected) return total; //如果当前一项没有被选中，则不加这一项。
+                    return total + current.productPrice * current.productCount
+                };
+                return this.products.reduce(reducer,0)
+            }
+        },
+        computed:{
+
+        },
+        filters: { //里面放自定义过滤器
+            toFixed(val,param1){ //这里的this指向window
+                return '￥'+ val.toFixed(param1); //val代表的是管道符前面内容，param1代表的是toFixed中传递的参数
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.css">
+    <title>Document</title>
+    <style>
+        .active{
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <router-link to="/home" tag="button">home</router-link>
+    <router-link to="/list" tag="button">list</router-link>
+    <!-- mode 动画模式-->
+    <transition
+            enter-active-class="animated fadeIn"
+            leave-active-class="animated fadeOut"
+            mode="out-in"
+    >
+        <!--动画在同一个平面内就要定位-->
+        <!--缓存谁就把谁包起来，动画不用缓存-->
+        <keep-alive>
+            <router-view style="position: absolute;top: 50px; left: 50px; width: 100%;"></router-view>
+        </keep-alive>
+    </transition>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script type="text/javascript">
+    let home= {template: `<div style="background: salmon;">home</div>`};
+    let list = {template: `<div style="background: gold;">list</div>` };
+    let routes = [
+        {path: '',component: home},
+        {path: '/home',component: home},
+        {path: '/list',component: list}
+    ];
+    let router = new VueRouter({
+        routes,
+        linkActiveClass: 'active',
+    })
+
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        router
+    });
+</script>
+</body>
+</html>

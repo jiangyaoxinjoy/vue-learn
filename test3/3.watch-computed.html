@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="val"> {{fullName}} {{cfullName}}
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            lastName: 'zfpx',
+            firstName: 'jyx',
+            val: '', //jyx-val-zfpx;
+            fullName:''
+        },
+        watch: { //当firstName或者lastName改变，val不会变化。给firstName等添加观察者才可以。这里用computed比较好。
+            val(cur,old) {
+                this.fullName = this.firstName +'-'+ cur +'-'+ this.lastName;
+            }
+        },
+        computed: {
+            cfullName() {
+                return this.firstName +'-'+ this.val +'-'+ this.lastName;
+            }
+        }
+    });
+</script>
+</body>
+</html>

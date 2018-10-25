@@ -1,0 +1,53 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <p ref="myp">{{msg}}</p>
+    <p ref="myp">{{msg}}</p>
+    <ul ref="wrap">
+        <li v-for="i in b" ref="myli">{{i}}</li>
+    </ul>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        a: 1,
+        data: {
+            msg: 'hello',
+            b: [1,2,3]
+        },
+        mounted() {  //this.$data, this.$watch, this.$setter, this.$el, this.$options
+            this.$refs.myp;
+            //如果dom元素不是通过v-for循环出来的只能获取一个。
+            //通过v-for循环出来的可以获取多个[].
+            console.log(this.$refs.myp);
+            console.log(this.$refs.myli);
+            this.b = [1,2,3,4]; //dom渲染是异步的。
+            //dom映射，数据改变了，dom会刷新。但此时dom可能没有重新渲染出来。
+            console.log(this.$refs.wrap); //里面有4个li
+            console.log('length:'+this.$refs.wrap.children.length); //li的长度为3
+            // debugger; //开debugger就可以看见3个li
+            this.$nextTick( () => { //数据变化，获取真实dom中的内容，需要等到页面渲染完毕后再去获取，使用的dom操作最好放在这里。
+                console.log('length:'+this.$refs.wrap.children.length); //4个
+            })
+            console.log(this.$options.a);
+
+            //console.log(vm); //创建实例这里还没有返回，所以拿不到vm实例。
+            this.$nextTick( () => { //异步方法，等待渲染dom完成后获取vm
+                console.log(vm)
+            })
+        }
+    });
+    console.log(vm.$options);
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="a" > {{msg}}
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {a:''},
+        computed: {
+            // msg(){
+            //     if(this.a.length > 6) {
+            //         return '太多了';
+            //     }else if(this.a.length < 3) {
+            //         return '太少了';
+            //     }
+            //     return '正好';
+            // }
+            msg(){
+                setTimeout(() => { //异步不能操作，可以用watch
+                    if(this.a.length > 6) {
+                        return '太多了';
+                    }else if(this.a.length < 3) {
+                        return '太少了';
+                    }
+                    return '正好';
+                },1500);
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <!--enter 是vue中的键盘修饰符 modifiers 键盘中的任意一个键都可以使用-->
+    <input type="text" v-model="val" @keyup.enter="add">
+    <ul>
+        <li v-for="(item,index) in arr" @mouseover="itemOver(index)" @mouseout="itemLeave(index)">
+            {{item.val}}
+            <label @click="deleteItem(index)" v-show="item.ifShow">X</label>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            val:'',
+            arr: []
+        },
+        methods: {
+            add() {
+                let temp = {
+                    val: this.val,
+                    ifShow: false
+                }
+                this.arr.unshift(temp);
+                this.val = '';
+            },
+            itemOver(index) {
+                let temp = this.arr[index];
+                temp.ifShow = !temp.ifShow;
+                this.arr.splice(index,1,temp);
+            },
+            itemLeave(index) {
+                let temp = this.arr[index];
+                temp.ifShow = !temp.ifShow;
+                this.arr.splice(index,1,temp);
+            },
+            deleteItem(index) {
+                this.arr.splice(index,1);
+            }
+        }
+    });
+</script>
+</body>
+</html>

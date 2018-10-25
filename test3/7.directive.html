@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .a{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button v-color="flag">变色</button>
+    <div class="a" v-drag></div>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            flag: 'red'
+        },
+        //自定义指令
+        directives: {
+            color(el, bindings) { // el指代btn
+                console.log(arguments);
+                el.style.background = bindings.value;
+            },
+            drag(el) {
+                el.onmousedown = function (e) {
+                    let disX = e.pageX - el.offsetLeft;
+                    let disY = e.pageY - el.offsetTop;
+                    document.onmousemove = function (e) {
+                        el.style.left = e.pageX - disX + 'px';
+                        el.style.top = e.pageY - disY + 'px';
+                    }
+                    document.onmouseup = function () {
+                        document.onmousemove = document.onmouseup = null;
+                    }
+                    e.preventDefault()
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

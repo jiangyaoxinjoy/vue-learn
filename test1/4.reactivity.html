@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    Object
+    {{a.school}} {{a.age}}
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    //vue会循环data中的数据(数据劫持)，依次的添加getter和setter实现数据响应。
+    //如果a没有school属性，我们在控制台输入vm.a.school="aaa"也不会导致页面数据的变化。
+    // 因为data循环数据时，没有给school添加getter和setter方法
+    //所以使用变量时先要初始化
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            a:{},
+            b:{school:'',age:''}
+        }
+    }); //Object.defineProperty ES5
+    console.log(vm);
+
+    //变量没有初始化的解决方案$set和替换原对象
+    vm.$set(vm.a,'school','daxue'); //$set可以给对象添加响应式的数据变化
+    vm.a = {'age':'8','school':'daxue'}; //替换原对象
+</script>
+</body>
+</html>

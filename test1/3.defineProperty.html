@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<p>vue 通过es5的Object.defineProperty进行数据的双向绑定</p>
+<input type="text" id="input">
+<script type="text/javascript">
+    let input = document.getElementById('input');
+    let obj = {};
+    let temp = {};
+    /*
+    Object.defineProperty(obj,'name',{
+        value: 1,
+        configurable:false, //是否可删除
+        writable: false, //是否可重新赋值
+        enumerable: true  //是否可枚举
+    })
+    delete obj.name
+    obj.name = 1000;
+    for (let key in obj) {
+        console.log(key)
+    }*/
+    Object.defineProperty(obj,'name', {
+        get() { //取obj的name属性会触发
+            return temp["name"];
+        },
+        set(val) { //给obj赋值会触发get方法
+            // obj.name = val //不能这样写，因为会无限重复调用set
+            temp["name"] = val; // 改变temp值
+            input.value = obj.name; //再将值赋值给输入框
+        }
+    });
+    input.value = obj.name; //页面加载时调用get方法
+    input.addEventListener('input',function (e) { //等待输入框变化调用set方法
+        obj.name = this.value;
+    });
+</script>
+</body>
+</html>

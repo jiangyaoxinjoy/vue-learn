@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <!--of和in都可以-->
+        <li v-for="(fruit,index) in fruites" :key="index">
+            {{fruit.name}}
+            <ul>
+                <li v-for="(c,cindex) in fruit.color" v-text="(index+1) + '.' + (cindex+1) + '.' + c"></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    <!--vue提供了v-for指令 更高效 会复用原有结构-->
+    <!-- 以前:拼字符串innerHtml 重复渲染,性能很低 -->
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            fruites: [
+                {name:'香蕉',color:['green','yellow']},
+                {name:'西瓜',color:['red','green','yellow']},
+                {name:'葡萄',color:['pink','purple','yellow']}
+            ]
+        }
+    });
+</script>
+</body>
+</html>

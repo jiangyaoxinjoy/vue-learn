@@ -2,7 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04cae6e-be8e-4820-91e9-e1c8038cd87e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/TechFront.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/learn-vue-cli/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1/2.mvvm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1/3.defineProperty.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1/4.reactivity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1/5.reactivity.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1/6.v-for.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1/7.event.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1/8.table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test1/8.todo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/1.promise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/2.filters.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/3.cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/4.computed.cart.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/4.promise-ajax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/4.promise-ajax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/5.transition.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/6.computed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/7.query.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test2/data/carts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3/1.modifires.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3/2.watch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3/3.watch-computed.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3/4.if-show.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3/5.v-bind_class.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3/6v-bind_style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3/7.directive.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3/todo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test3/todoList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4/1.lifecycle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4/2.mounted.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4/3.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4/4.scope-component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4/5.emit-on.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4/6.parent-child.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4/7.emit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4/8.sync.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test4/9.dialog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/1.slot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/10.nest-router.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/11.2.param-router.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/11.param-router.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/12.transition-router.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/2.child-method.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/3.keep-alive.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/4.lifecycle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/5.panel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/6.panel-for.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/6.slot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/7.eventBus.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/8.router-statement.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test5/9.router-programing.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test6/1.module.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test6/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test6/src/pages/index/a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test6/src/pages/index/b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/1.arr.js" beforeDir="false" afterPath="$PROJECT_DIR$/test1/1.arr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/2.arrow-fn.js" beforeDir="false" afterPath="$PROJECT_DIR$/test1/2.arrow-fn.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,29 +75,31 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="notify.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test6/src/pages/3-router/plugin/notify.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="529">
-                <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-              </first_editor>
-              <second_editor />
+            <state relative-caret-position="450">
+              <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Vue File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>options</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,7 +107,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/test3/5.v-bind.html" />
+        <option value="$PROJECT_DIR$/test3/5.v-bind_class.html" />
+        <option value="$PROJECT_DIR$/test3/6v-bind_style.html" />
+        <option value="$PROJECT_DIR$/test3/7.directive.html" />
+        <option value="$PROJECT_DIR$/test3/todoList.html" />
+        <option value="$PROJECT_DIR$/test3/todo.js" />
+        <option value="$PROJECT_DIR$/test4/lifecycle.html" />
+        <option value="$PROJECT_DIR$/test4/2.mounted.html" />
+        <option value="$PROJECT_DIR$/test4/3.component.html" />
+        <option value="$PROJECT_DIR$/test4/4.scope-component.html" />
+        <option value="$PROJECT_DIR$/test4/parent-child.html" />
+        <option value="$PROJECT_DIR$/test4/5.emit-on.js" />
+        <option value="$PROJECT_DIR$/test4/emit.html" />
+        <option value="$PROJECT_DIR$/test4/8.sync.html" />
+        <option value="$PROJECT_DIR$/test4/9.dialog.html" />
+        <option value="$PROJECT_DIR$/test5/1.slot.html" />
+        <option value="$PROJECT_DIR$/test5/2.child-method.html" />
+        <option value="$PROJECT_DIR$/test1/8.table.html" />
+        <option value="$PROJECT_DIR$/test5/3.keep-alive.html" />
+        <option value="$PROJECT_DIR$/test5/4.lifecycle.html" />
+        <option value="$PROJECT_DIR$/test5/5.panel.html" />
+        <option value="$PROJECT_DIR$/test5/6.panel-for.html" />
+        <option value="$PROJECT_DIR$/test5/7.eventBus.html" />
+        <option value="$PROJECT_DIR$/test5/8.vue-route.html" />
+        <option value="$PROJECT_DIR$/test5/8.router-statement.html" />
+        <option value="$PROJECT_DIR$/test5/9.router-programing.html" />
+        <option value="$PROJECT_DIR$/test5/10.nest.router.html" />
+        <option value="$PROJECT_DIR$/test5/11.param-router.html" />
+        <option value="$PROJECT_DIR$/test5/11.2.param-router.html" />
+        <option value="$PROJECT_DIR$/test5/12.transition-router.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/test6/1.module.html" />
+        <option value="$PROJECT_DIR$/test6/a.js" />
+        <option value="$PROJECT_DIR$/test6/b.js" />
+        <option value="$PROJECT_DIR$/test6/main.js" />
+        <option value="$PROJECT_DIR$/test6/webpakc.config.js" />
+        <option value="$PROJECT_DIR$/learn-vue-cli/readme.md" />
+        <option value="$PROJECT_DIR$/test6/package.json" />
+        <option value="$PROJECT_DIR$/test6/src/pages/index/a.js" />
+        <option value="$PROJECT_DIR$/test6/src/pages/index/b.js" />
+        <option value="$PROJECT_DIR$/test6/.babelrc" />
+        <option value="$PROJECT_DIR$/test6/build/webpack.plugins.js" />
+        <option value="$PROJECT_DIR$/test6/src/styles/index.less" />
+        <option value="$PROJECT_DIR$/test6/build/webpack.config.js" />
+        <option value="$PROJECT_DIR$/test6/src/pages/index/index.html" />
+        <option value="$PROJECT_DIR$/test6/build/webpack.rules.js" />
+        <option value="$PROJECT_DIR$/test6/src/pages/index/index.js" />
+        <option value="$PROJECT_DIR$/test6/build/utils.js" />
+        <option value="$PROJECT_DIR$/test6/readme.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/test6/src/pages/3-router/plugin/notify.vue" />
       </list>
     </option>
   </component>
@@ -63,11 +175,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/learn-vue-cli/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="605" />
-    <option name="y" value="63" />
-    <option name="width" value="1229" />
-    <option name="height" value="891" />
+    <option name="x" value="765" />
+    <option name="y" value="8" />
+    <option name="width" value="1165" />
+    <option name="height" value="1009" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -81,6 +197,41 @@
               <item name="vue-learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="vue-learn" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="vue-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vue-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="test6" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vue-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vue-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="test6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vue-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vue-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="test6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vue-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vue-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="test6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="3-router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vue-learn" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vue-learn" type="462c0819:PsiDirectoryNode" />
+              <item name="test6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="3-router" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -89,16 +240,31 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="=&gt; {&#9;null&#9;null&#10;url&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="8.11.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
-    <property name="node.js.selected.package.prettier" value="" />
+    <property name="node.js.selected.package.prettier" value="D:\webpackrpoj\agitwork\vue-learn\node_modules\prettier" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\webpackrpoj\agitwork\vue-learn\test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\webpackrpoj\agitwork\vue-learn\test5" />
+      <recent name="D:\webpackrpoj\agitwork\vue-learn\test4" />
+      <recent name="D:\webpackrpoj\agitwork\vue-learn\test3" />
+      <recent name="D:\webpackrpoj\agitwork\vue-learn\test2" />
+      <recent name="D:\webpackrpoj\agitwork\vue-learn\test" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -112,6 +278,33 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration name="1.module.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue-learn/test6/1.module.html" />
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/vue-learn/test6/dist/index.html" />
+    <configuration name="b.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="b.js" working-dir="$PROJECT_DIR$/test6" />
+    <configuration name="main.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="main.js" working-dir="$PROJECT_DIR$/test6" />
+    <configuration name="webpack.config.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="webpack.config.js" working-dir="$PROJECT_DIR$/test6/build" />
+    <list>
+      <item itemvalue="JavaScript Debug.1.module.html" />
+      <item itemvalue="Node.js.main.js" />
+      <item itemvalue="Node.js.b.js" />
+      <item itemvalue="Node.js.webpack.config.js" />
+      <item itemvalue="JavaScript Debug.index.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.webpack.config.js" />
+        <item itemvalue="Node.js.b.js" />
+        <item itemvalue="JavaScript Debug.1.module.html" />
+        <item itemvalue="Node.js.main.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -122,58 +315,402 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539766864346</updated>
-      <workItem from="1539766865615" duration="852000" />
+      <workItem from="1539766865615" duration="1461000" />
+      <workItem from="1539826472050" duration="27675000" />
+      <workItem from="1539912844914" duration="27800000" />
+      <workItem from="1540172144909" duration="27867000" />
+      <workItem from="1540259007415" duration="20655000" />
+      <workItem from="1540283244701" duration="5679000" />
+      <workItem from="1540288951048" duration="101000" />
+      <workItem from="1540344386561" duration="2629000" />
+      <workItem from="1540347031499" duration="917000" />
+      <workItem from="1540348377531" duration="141000" />
+      <workItem from="1540348889657" duration="11499000" />
+      <workItem from="1540362754990" duration="178000" />
+      <workItem from="1540435419994" duration="146000" />
+      <workItem from="1540435610622" duration="99000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="852000" />
+    <option name="totallyTimeSpent" value="126847000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="605" y="63" width="1229" height="891" extended-state="0" />
+    <frame x="765" y="8" width="1165" height="1009" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2497939" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49935484" visible="true" weight="0.24804178" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info id="npm" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32930845" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34154534" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Structure" order="1" sideWeight="0.50064516" side_tool="true" weight="0.2683791" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.31064764" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32922733" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49935484" visible="true" weight="0.13986014" />
+      <window_info id="Structure" order="1" sideWeight="0.50064516" side_tool="true" weight="0.2683791" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32903227" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/test3/todo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1045">
+          <caret line="42" column="13" lean-forward="true" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4/1.lifecycle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4/2.mounted.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4/3.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4/5.emit-on.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4/8.sync.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4/9.dialog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4/7.emit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="32" column="52" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4/4.scope-component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="51" column="15" lean-forward="true" selection-start-line="51" selection-start-column="15" selection-end-line="51" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test4/6.parent-child.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-60">
+          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/2.child-method.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="46" column="31" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1/8.table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/4.lifecycle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3/5.v-bind_class.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="27" column="52" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/1.slot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/6.slot.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/6.panel-for.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3/6v-bind_style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/7.eventBus.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="614">
+          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/5.panel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/3.keep-alive.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="50" column="6" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="50" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/9.router-programing.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="21" column="92" selection-start-line="21" selection-end-line="21" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/10.nest-router.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="92" lean-forward="true" selection-start-line="27" selection-end-line="27" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/11.param-router.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/11.2.param-router.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="35" column="64" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/8.router-statement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="26" column="26" selection-end-line="71" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test5/12.transition-router.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="28" column="19" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/1.module.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/a.js" />
+    <entry file="file://$PROJECT_DIR$/test6/b.js" />
+    <entry file="file://$PROJECT_DIR$/test6/webpakc.config.js" />
+    <entry file="file://$PROJECT_DIR$/test6/main.js" />
+    <entry file="file://$PROJECT_DIR$/learn-vue-cli/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="617">
+            <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/src/pages/index/b.js" />
+    <entry file="file://$PROJECT_DIR$/test6/src/pages/index/a.js" />
+    <entry file="file://$PROJECT_DIR$/test6/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/dist/static/js/index.bb66121ea43146ff5c4e.js" />
+    <entry file="file://$PROJECT_DIR$/test6/dist/index.html" />
+    <entry file="file://$PROJECT_DIR$/test6/build/webpack.rules.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/build/webpack.plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="438">
+            <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/src/pages/index/index.js" />
+    <entry file="file://$PROJECT_DIR$/test6/src/pages/index/index.html" />
+    <entry file="file://$PROJECT_DIR$/test6/build/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/build/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/src/styles/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="47" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="529">
-            <caret line="47" column="6" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
+          <first_editor relative-caret-position="318">
+            <caret line="242" column="7" selection-start-line="242" selection-start-column="7" selection-end-line="242" selection-end-column="7" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/src/pages/3-router/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test6/src/pages/3-router/plugin/notify.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
         </state>
       </provider>
     </entry>

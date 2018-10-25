@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <brother1></brother1>
+    <brother2></brother2>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let EventBus = new Vue;
+    let brother1 = {
+        template: `<div :style="{color: color}">{{color}} <button @click="change">变绿</button></div>`,
+        data() {
+            return {
+                color: 'green',
+                old: 'green'
+            }
+        },
+        created(){
+            EventBus.$on('changeRed', val => { //页面一加载bro1监听changeRed事件
+                this.color = val;
+            })
+        },
+        methods:{
+            change(){
+                this.color= this.old;
+                EventBus.$emit('changeGreen',this.old);
+            }
+        }
+    };
+    let brother2 = {
+        template: `<div :style="{color: color}">{{color}} <button @click="change">变红</button></div>`,
+        data() {
+            return {
+                color: 'red',
+                old: 'red'
+            }
+        },
+        methods: {
+            change(){
+                this.color= this.old;
+                EventBus.$emit('changeRed',this.old);
+            }
+        },
+        created(){
+            EventBus.$on('changeGreen', val => this.color = val);
+        }
+    };
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        components: {
+            brother1,brother2
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <!--{{}} moustache 小胡子语法 表达式 可以赋值运算，计算，取值，三元表达式 尽量少些逻辑可以用cpmputed计算-->
+
+    <!--v-model 双向绑定-->
+    <input type="text" v-model="msg">
+
+    <!--v-text === {{}} 防止页面暴露 {{xxx}}-->
+    <p v-text="msg"></p>
+
+    <!-- v-once 只绑定一次，当数据再次发生变化也不会导致页面重新渲染 -->
+    <p v-once v-text="msg"></p>
+
+    <!-- v-html 把html字符串当作dom渲染 一定是可信任的html，防止恶意攻击 -->
+    <div v-html="p"></div>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+  let vm = new Vue({
+      el: '#app',
+      data: {
+          msg: 'hello,jyx',
+          p: '<p>哈哈哈</p>'
+      }
+  }); //Object.defineProperty ES5
+</script>
+</body>
+</html>

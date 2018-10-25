@@ -1,0 +1,36 @@
+@margin: 15px;
+body{
+  background-image: url(../assets/img/plane.png);
+}
+.main {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div{
+  	flex: 1;
+  }
+  .box{
+  	width: 30px;
+  	height: 30px;
+  	background-color: rgba(0,0,0,.6);
+  	margin:@margin auto;
+  	text-align: center;
+  	line-height: 30px;
+  }
+  .right-2 .box,.left-2 .box{
+		margin:@margin*4 auto;
+  }
+  .right-3 .box,.left-3 .box{
+		margin:@margin*10 auto;
+  }
+}
+.loding{
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.8);
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <!--嵌套的多级路由-->
+    <router-link to="home">home</router-link>
+    <router-link to="detail">detail</router-link>
+    <router-view></router-view>
+</div>
+<template id="detail">
+    <div>
+        detail
+        <ul>
+            <router-link tag="li" to="/detail/profile">profile</router-link>
+            <router-link tag="li" to="/detail/about">about</router-link>
+            <router-view></router-view>
+        </ul>
+    </div>
+</template>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script type="text/javascript">
+    let home = {
+        template: `<div>home</div>`
+    };
+    let detail = {
+        template: '#detail'
+    };
+    let profile = {
+        template: `<div>profilegggg</div>`
+    };
+    let about = {
+        template: `<div>aboutgggg</div>`
+    };
+    let routes = [
+        {path:'',component: home},
+        {path:'/home',component: home},
+        {
+            path:'/detail',
+            component: detail,
+            children: [ //children中的path不带‘/’,斜杠代表一级路径。
+                {path: '',component:profile},
+                {path: 'profile',component:profile},
+                {path: 'about',component:about}
+            ]
+        },
+        {path:'*', redirect:'/home'},
+    ];
+    let router = new VueRouter({
+        routes
+    })
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        router
+    });
+</script>
+</body>
+</html>

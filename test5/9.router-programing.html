@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--路由的编程式导航，在js中跳转页面-->
+    <router-view></router-view>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script type="text/javascript">
+    let home= {
+        template: `<div>home <button @click="toList">go to list</button></div>`,
+        methods: {
+            toList() {
+                // this.$router.push('/list'); //push强制跳转路径
+                this.$router.replace('/list'); //replace 路由替换 将当前的历史替换掉
+                console.log(this.$router);
+            }
+        }
+    };
+    let list = {
+        template: `<div>list <button @click="back">go to home</button></div>`,
+        methods: {
+            back() {
+                this.$router.go(-1); //go()返回某一级
+            }
+        }
+    };
+    let routes = [
+        {path: '',component: home}, // 默认展示的路由
+        {path: '/home',component: home},
+        {path: '/list',component: list},
+        // {path: '*',component: list}, //路由匹配不到显示list,但导航栏的路径还是其他的路径，只是显示list组件。
+        {path: '*',redirect:'/home'} //导航栏也会变成home 404的时候
+    ];
+    let router = new VueRouter({
+        routes,
+        linkActiveClass: 'active',
+    })
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        router, //每个组件都会拥有一个名字叫$router(里面存的是方法)的属性。this.$router
+                //还有一个叫$route(里面存的都是属性)
+    });
+</script>
+</body>
+</html>

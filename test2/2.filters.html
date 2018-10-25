@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+两个vue实例使用同一个filters,全局过滤器。
+<div id="app1">
+    app1
+    <h1>{{ 'app1' |  myFilter}}</h1>
+</div>
+<div id="app2">app2
+    <h1>{{ 'app2' |  myFilter}}</h1>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    //全局过滤器
+    //把filter挂载到构造函数Vue上,filter没有s，因为filter只能一个个挂。
+    //过滤器要放在实例上面。
+    Vue.filter('myFilter', val => val + '-filters');
+    let vm1 = new Vue({
+        el: '#app1',
+        data: {},
+        /*
+        filters: {
+            myFilter(val) {
+                return val + '-filters'
+            }
+        }*/
+    });
+    let vm2 = new Vue({
+        el: '#app2',
+        data: {}
+    });
+</script>
+</body>
+</html>

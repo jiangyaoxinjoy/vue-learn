@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .mask{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.35);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dialog{
+            width: 450px;
+            height: 250px;
+            background-color: #fff;
+
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="ifShow = true">弹框</button>
+    <!--close点击关闭按钮是触发的函数-->
+    <modal :show="ifShow" @close="() => ifShow = false"></modal>
+</div>
+<template id="dialog">
+    <div v-show="show" class="mask">
+        <div class="dialog">
+            <button @click="shutdowm">关闭</button>
+        </div>
+    </div>
+</template>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let  modal = {
+        props: ['show'],
+        template: '#dialog',
+
+        methods: {
+            shutdown() {
+                this.$emit('close');
+            }
+        }
+    }
+    let vm = new Vue({
+        el: '#app',
+        components: {
+            modal
+        },
+        data: {
+            ifShow: false
+        }
+    });
+</script>
+</body>
+</html>

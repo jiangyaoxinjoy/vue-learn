@@ -1,0 +1,82 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        /*.mask{*/
+            /*position: fixed;*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+            /*background-color: rgba(0,0,0,.35);*/
+            /*display: flex;*/
+            /*justify-content: center;*/
+            /*align-items: center;*/
+        /*}*/
+        /*.dialog{*/
+            /*width: 450px;*/
+            /*height: 250px;*/
+            /*background-color: #fff;*/
+
+        /*}*/
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--<modal></modal>-->
+    <modal m="1">
+        <!--没有命名的插槽在default显示-->
+        <a href="">go to pack</a>
+        <h1 slot="title">是否删除</h1>
+        <!--slot上的方法和变量都在父组件取值-->
+        <p slot="content" @click="pFn">p确认删除吗 {{a}}</p>
+        <a href="">go to sleep</a>
+    </modal>
+    <!--<modal><span>是否删除</span></modal>-->
+</div>
+<template id="modal">
+    <!--模板中只能有一个跟元素-->
+    <div class="mask">
+        <div class="dialog">
+            {{m}}
+            <slot name="title"></slot>
+            <slot name="content"></slot>
+
+            <!--slot的默认内容，没传内容时显示-->
+            <!--slot默认name是default，可以不写-->
+            <slot name="default"><h3>这是一个默认标题</h3></slot>
+        </div>
+    </div>
+</template>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let modal = {
+        props: ['m'],
+        template: '#modal'
+    }
+    let vm = new Vue({
+        el: '#app',
+        data: {a:1},
+        components:{
+            modal
+        },
+        methods: {
+            pFn() {
+                console.log('p')
+            }
+        }
+    });
+</script>
+</body>
+</html>

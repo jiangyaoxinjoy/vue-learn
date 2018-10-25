@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(item,index) in arr" v-if="item.flag == true">true+{{index}}</li>
+        <li v-else>false+{{index}}</li>
+    </ul>
+    <button class="btn" @click="flag=true">1</button>
+    <button class="btn" @click="flag=false">2</button>
+    <!--template标签 是vue提供的，没有实际意义，用来包裹元素。 v-show不支持这个标签-->
+    <template>
+        <div v-if="flag">1</div>
+        <div v-else>2</div>
+    </template>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            arr: [{flag: true},{flag: false},{flag: true}],
+            flag: true
+        }
+    });
+</script>
+</body>
+</html>

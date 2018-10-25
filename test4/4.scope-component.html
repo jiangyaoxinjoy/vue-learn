@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <!--自闭和 标签内可以写东西-->
+    <mycomponent></mycomponent>
+    <my-name></my-name>
+    <parent>
+
+    </parent>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    //局部组件使用三部曲
+    // 1.创建组件
+    // 2.注册组件
+    // 3.引用组件
+    //组件是相互独立的，不能直接跨作用域。 vm的实例也是一个组件。
+    //每个组件都拥有生命周期函数。
+    //组件理论上可以无限嵌套。
+    let mycomponent = {template:`<div>i'am handsome</div>`};
+    let myName = {template:`<span>{{name}}</span>`,
+        data() {
+            return {
+                name: 'jyx'
+            }
+        }};
+    //组件嵌套
+    let grandson = {template:`<div>grandson</div>`};
+    let son = {template:`<div>son <grandson></grandson></div>`,
+        components: {
+            grandson
+        }
+    };
+    let parent = {template:`<div>parent <son></son></div>`,
+        components:{
+            son
+        }
+    };
+
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            p: 'parent'
+        },
+        components: {
+            mycomponent,
+            myName: myName,
+            parent
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <!--vue会忽略某些表单元素上的value默认值，比如text类型， selected checked 都没有意义-->
+    <!--v-model 双向绑定-->
+    <input type="text" v-model="msg">
+    <hr/>
+
+
+    <!--checkbox如果一组复选框，不能绑定boolean值，要绑定数组，会自动把value属性的值放进数组-->
+    </br>checkbox爱好：
+    <input type="checkbox" value="游泳" v-model="b">游泳
+    <input type="checkbox" value="爬山" v-model="b">爬山
+    </br>选中了：{{b}}
+    <hr/>
+
+
+    <!--select-->
+    <!--select多选框 multiple select数据类型是[]-->
+    select多选：
+    <select name="" id="select" v-model="select" multiple>
+        <!--如果option中的value没写，就会自动去option中的值，第一项请选择要加disabled-->
+        <option value="" disabled>请选择</option>
+        <option value="1">你好</option>
+        <option value="2">我好</option>
+        <option value="3">大家好</option>
+    </select>
+    </br>选中了：{{select}}
+    <hr/>
+
+
+    <!--radio-->
+    性别：
+    <input type="radio" value="男" v-model="radio">男
+    <input type="radio" value="女" v-model="radio">女
+    </br>选中了：{{radio}}
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            b: [],
+            msg:'textbox',
+            select: [],
+            radio:'男'
+        }
+    });
+</script>
+</body>
+</html>

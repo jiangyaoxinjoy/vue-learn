@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    parnet:  {{money}}
+    <!--当前组件的属性 = 父级的值-->
+    <child :m="money" a="1"></child>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({ //parent
+        el: '#app',
+        data: {
+            money: 100
+        },
+        components: {
+            child: {
+                // props:['m'],
+                props:{  //属性名和data，methods，computed命名不能相同。
+                    m: { // ：传过来是一个js变量，是一个Number类型
+                        type: Number,
+                        required:true //必须传递，不能和default一起用。
+                    },
+                    a: { //传过来是属性的值，一个字符串
+                        type: String,
+                        validator(val){
+                            return val == 1;
+                        } // 自定义校验器 第一个参数是当前传递的值 返回true表示校验通过。反之false。
+                    },
+                    c: {
+                        default: 0 //赋予默认值，父组件没传调用default，
+                    }
+                }, //对象的形式可以校验。
+                //校验是不会阻止代码的执行，只是警告。
+                template: `<div>child {{m}} {{a}} {{c}}</div>`
+            }
+        }
+    });
+</script>
+</body>
+</html>

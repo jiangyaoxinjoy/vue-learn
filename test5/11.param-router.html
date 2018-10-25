@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <!--带参数的路径-->
+    <router-link to="/article/1">文章1</router-link>
+    <router-link to="/article/2">文章2</router-link>
+    <router-link to="/article/3">文章3</router-link>
+
+    <router-view></router-view>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript" src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script type="text/javascript">
+    let article = {
+        template:`<div>artitle {{$route.params.c}}</div>`
+    };
+    //路径参数 值必须要有但是随机的。
+    // /:x 可以是任意值
+    // /x 是一个固定值'/article/:c/a'
+    // /article/2/jyx => /article/:c/:a => {c:2,a:'jyx'} = this.$router.params
+    let routes = [{path:'/article/:c',component:article}];
+    let router = new VueRouter( {
+        routes
+    });
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        router
+    });
+</script>
+</body>
+</html>

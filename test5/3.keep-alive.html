@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">
+    <!--component,template,slot,transition... vue的自带组件-->
+    <input type="radio" value="home" v-model="val"> home
+    <input type="radio" value="list" v-model="val"> list
+
+    <!--<template v-if="val == 'home'">-->
+        <!--<component is="home"></component>-->
+    <!--</template>-->
+    <!--<template v-if="val == 'list'">-->
+        <!--<component is="list"></component>-->
+    <!--</template>-->
+
+    <!--<component :is="val"></component>-->
+    <!--上面写法没有缓存消耗性能-->
+
+    <!--缓存不会再走钩子函数-->
+    <keep-alive>
+        <component :is="val"></component>
+    </keep-alive>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let home= {
+        template: `<div>home</div>`,
+        beforeDestroy(){
+            console.log('home销毁')
+        },
+        mounted() {
+            console.log('home挂载')
+        }
+    };
+    let list = {
+        template: `<div>list</div>`,
+        beforeDestroy(){
+            console.log('list销毁')
+        },
+        mounted() {
+            console.log('list挂载')
+        }
+    };
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            val:'home'
+        },
+        components: {
+            home,
+            list
+        },
+        mounted() {
+            //子组件和父组件同时拥有mounted方法，先执行子组件的mounted方法
+            console.log('parnet mounted');
+        }
+    });
+</script>
+</body>
+</html>

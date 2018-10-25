@@ -1,0 +1,77 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <!--say-title 自定义属性，多个单词用短横线链接 -->
+    <panel type="primary" @say-title="sayTitle" ref="panel">
+        <div slot="title">这是一篇vue的使用</div>
+        <div slot="content">this is content
+            <p>组件的属性传递</p>
+            <p>slot的用法</p>
+            <p>ref的用法</p>
+        </div>
+        <div>this is footer author: joy</div>
+    </panel>
+</div>
+<template id="panel">
+    <div class="panel" :class="[type] | addPanel">
+        <div class="panel-heading"  ref="head">
+            <slot name="title"></slot>
+        </div>
+        <div class="panel-body">
+            <slot  name="content">content</slot>
+        </div>
+        <div class="panel-footer">
+            <slot>匿名</slot>
+            <button @click="clickMe">点我</button>
+        </div>
+    </div>
+</template>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let panel = {
+        props:{
+            type: {
+                type: String,
+                default: 'default'
+            } //子组件不能修改父组件传过来的值。
+        },
+        template: '#panel',
+        filters: { //或者在computed，把type赋值到子组件的data的一个值上使用。
+            addPanel(val) {
+                console.log(val)
+                return val.map( item => {
+                    return 'panel-'+item;
+                })
+            }
+        },
+        methods: {
+            clickMe() {
+                this.$emit('say-title',this.$refs.head.innerText)
+            }
+        }
+    }
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        components: {
+            panel
+        },
+        methods:{
+            sayTitle(tit) {
+                console.log(tit)
+            }
+        }
+    });
+</script>
+</body>
+</html>

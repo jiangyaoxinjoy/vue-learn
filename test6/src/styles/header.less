@@ -1,0 +1,173 @@
+ul{list-style: none;}
+@navHeight: 60px;
+@subNavHeight:30px;
+@color:#000;
+*{margin: 0; padding:0;box-sizing: border-box;}
+a{
+	text-decoration: none;
+	color: @color;
+}
+.inline-block{
+	display: inline-block;
+	zoom: 1;
+}
+.clearfix{
+	&:after{
+		content:".";
+		display:block;
+		height:0;
+		clear:both;
+		visibility:hidden
+	}
+}
+img{
+	width: 100%;
+}
+body{
+	color: @color;
+	width: 100%;
+	overflow-x: hidden;
+	font-family: 'Sterling SSm A','Sterling SSm B','NSimSun','STSong',serif;
+	.navbar{
+		width: 100%;
+	}
+}
+.container{
+	position: relative;
+	top: @navHeight;
+}
+.navbar{
+	width: 100%;
+	height: auto;
+	.subback{
+		display: none;
+	}
+}
+.nav-main{
+	li{
+		display: inline-block;
+		zoom: 1;
+		height: @navHeight;
+		line-height: @navHeight;
+		padding: 0 15px;
+		a{
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.sub-menu {
+	width: 100%;
+	>li{
+		display: none;
+		width: 100%;
+	}
+	li.is-active{
+		display: block;
+	}
+}
+.m-menu {
+	display: none;
+	.navbar-toggle{
+		float: left;
+	    width: @navHeight;
+	    height: 100%;
+	    padding: 18px 14px;
+	    cursor: pointer;
+	    .icon-bar {
+			transition: all .3s;
+		    width: 100%;
+		    height: 2px;
+		    background-color: #000;
+		    display: block;
+		    margin: 0 auto 5px;
+		    border-radius: 0;
+		}
+	}
+	.navbar-toggle.is-active{
+		.icon-bar:nth-child(2) {
+			opacity: 0;
+		}
+		.icon-bar:nth-child(1) {
+			transform:rotate(45deg);
+			transform-origin:20% 80%;
+		}
+		.icon-bar:nth-child(3) {
+			transform:rotate(-45deg);
+			transform-origin:20% 10%;
+
+		}
+	}
+}
+@media (max-width: 1024px) {
+	::-webkit-scrollbar {
+	    width: 0px;
+	    display: none;
+	    height: 0;
+	}
+	body{
+		&.is-open{
+			height: 100vh;
+			overflow-y: hidden;
+		}
+	}
+	.navbar{
+		position: relative;
+		.subback{
+			display: block;
+			color: #222;
+			font-size: 12px;
+			padding: 5px 0;
+		}
+	}
+	.m-menu{
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: @navHeight;
+		background-color: #ccc;
+		z-index: 2;
+	}
+	.navcommon{
+		position: fixed;
+		width: 100%;
+		transition: left .5s;
+		overflow-y: auto;
+		top: @navHeight;
+		height: calc(100vh - @navHeight);
+		overflow-y: auto;
+		text-align: center;
+		background-color: #ccc;
+		z-index: 2;
+		/*-webkit-overflow-scrolling: touch;ios滚动顺滑*/
+	}
+	.nav-main{
+		display: none;
+		left: 0%;
+		.navcommon;
+		&.is-open{
+			display: block;
+		}
+		&.is-active{
+			left: -100%;
+		}
+		&>li {
+	    	display: block;
+		}
+	}
+	.sub-menu{
+		left: 100%;
+		.navcommon;
+		.is-active{
+			display: block;
+		}
+		&.is-open{
+			display: block;
+			left:0;
+
+		}
+	}
+}

@@ -78,16 +78,30 @@ let arr1 = [1,2,3].map( item => {
 
 /**
  *find
- * 不会改变原数组
+ * find,some,every不会改变原数组
  * 返回满足测试条件的第一个值，找到第一个后停止循环,找不到返回undefined
  */
-  //some 找到true，找到后停止迭代返回true,找不到返回false
-  //every 找到false，找到后停止迭代，返回false,找不到也false
+
+/**
+ * every
+  * @arr.every(callback[, thisArg])
+ * 如果为 every 提供一个 thisArg 参数，在该参数为调用 callback 时的 this 值。
+ * 如果省略thisArg参数，则callback 被调用时的 this 值，在非严格模式下为全局对象，在严格模式下传入 undefined。
+ * 数组每个元素依次执行callback函数，找到一个使callback返回false的元素后停止迭代数组，并返回false。否则callback返回true。
+ * 找不到也返回false。
+ * callback 只会为那些已经被赋值的索引调用。不会为那些被删除或从来没被赋值的索引调用。
+ */
+/**
+ * some
+ * arr.some(callback[, thisArg])
+ * some和every类似。
+ * 找到了这样一个值，some 将会立即返回 true。否则，some 返回false。
+ */
 let res = [1,3,5,6].every( (item,index) => {
-  return item == 33
+  return item > 1;
 
 })
-// console.log(res)
+console.log(res)
 
 /**
  * reducer 迭代器

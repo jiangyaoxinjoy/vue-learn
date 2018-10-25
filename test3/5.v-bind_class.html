@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .a{
+            background-color: aquamarine;
+        }
+        .b {
+            font-size: 30px;
+        }
+        .c {
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+
+    <!--:class绑定的样式和class绑定的不冲突-->
+    <div class="a b" :class="ifC? 'c': ''">1adfafa ddafdae</div>
+
+    <!--用对象-->
+    <div class="a b" :class="{c: ifC}">3adfafa ddafdae</div>
+
+    <!--用数组-->
+    <div class="c" :class="[class1,class2]">4adfafa ddafdae</div>
+
+    <!--数组套对象-->
+    <div :class="[class1,class2,{c: false}]">5adfafa ddafdae</div>
+
+    <div v-for="(a,i) in 10" :class="{a: i%2}">{{a}}</div>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            class1: 'a',
+            class2: 'b',
+            ifC: true
+        }
+    });
+</script>
+</body>
+</html>

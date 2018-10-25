@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--通过ref调用子组件方法-->
+<div id="app">
+    <loading ref="load"></loading>
+</div>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let loading = {
+        template: `<div v-show="flag" :class="{red: ifRed}">loading...</div>`,
+        data() {
+            return {
+                flag: true,
+                a:1,
+                ifRed:false
+            }
+        },
+        methods: {
+            hide() {
+                this.flag = false;
+            }
+        }
+    }
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        components: {
+            loading
+        },
+        mounted() { //ref如果放在组件上获取的是组件的实例，并不是组件的dom元素
+            console.log(this.$refs.load);
+            // this.$refs.load.hide();
+            // this.$refs.load.ifRed = true;
+            this.$refs.load.$el.style.backgroundColor = 'red';
+        }
+    });
+</script>
+</body>
+</html>
