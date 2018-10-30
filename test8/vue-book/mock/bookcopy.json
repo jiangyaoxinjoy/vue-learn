@@ -1,0 +1,50 @@
+[
+  {"bookCover":"https://img12.360buyimg.com/n2/jfs/t1/1355/30/6157/149406/5ba20f3bE9b208705/baa0759c220ad7c6.jpg!q95.webp",
+    "bookName":"架构整洁之道",
+    "bookInfo": "架构整洁之道",
+    "bookPrice":"94.1",
+    "bookId":1
+  },
+  {"bookCover":"https://img10.360buyimg.com/n2/jfs/t1/1161/40/9018/258145/5bab342fEd4e818e4/c42adf2160981e69.jpg!q95.webp",
+    "bookName":"消失的搭车客",
+    "bookInfo": "消失的搭车客：美国都市传说及其意义",
+    "bookPrice":"37.8",
+    "bookId":2
+  },
+  {"bookCover":"https://img11.360buyimg.com/n2/jfs/t22882/66/875555255/608966/ee62ac33/5b47093cN9548ffce.jpg!q95.webp",
+    "bookName":"未来地图",
+    "bookInfo": "未来地图 : 技术、商业和我们的选择",
+    "bookPrice":"93.1",
+    "bookId":3
+  },
+  {"bookCover":"https://img13.360buyimg.com/n2/jfs/t1/2076/11/4060/345479/5b9b44e8E1de962ba/362cc063f9e8fd16.jpg!q95.webp",
+    "bookName":"人工智能产品经理",
+    "bookInfo": "人工智能产品经理：人机对话系统设计逻辑探究",
+    "bookPrice":"56.1",
+    "bookId":4
+  },
+  {"bookCover":"https://img12.360buyimg.com/n2/jfs/t1/1355/30/6157/149406/5ba20f3bE9b208705/baa0759c220ad7c6.jpg!q95.webp",
+    "bookName":"架构整洁之道",
+    "bookInfo": "架构整洁之道",
+    "bookPrice":"94.1",
+    "bookId":5
+  },
+  {"bookCover":"https://img10.360buyimg.com/n2/jfs/t1/1161/40/9018/258145/5bab342fEd4e818e4/c42adf2160981e69.jpg!q95.webp",
+    "bookName":"消失的搭车客",
+    "bookInfo": "消失的搭车客：美国都市传说及其意义美国都市传说及其意义美国都市传说及其意义",
+    "bookPrice":"37.8",
+    "bookId":6
+  },
+  {"bookCover":"https://img11.360buyimg.com/n2/jfs/t22882/66/875555255/608966/ee62ac33/5b47093cN9548ffce.jpg!q95.webp",
+    "bookName":"未来地图",
+    "bookInfo": "未来地图 : 技术、商业和我们的选择",
+    "bookPrice":"93.1",
+    "bookId":7
+  },
+  {"bookCover":"https://img13.360buyimg.com/n2/jfs/t1/2076/11/4060/345479/5b9b44e8E1de962ba/362cc063f9e8fd16.jpg!q95.webp",
+    "bookName":"人工智能产品经理",
+    "bookInfo": "人工智能产品经理：人机对话系统设计逻辑探究",
+    "bookPrice":"56.1",
+    "bookId":8
+  }
+]

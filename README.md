@@ -243,6 +243,16 @@ chrome浏览器安装Vue Devtools 扩展，帮助调试vue
 `test6`
 
 ###webpack的一些内容。
+###vue路由和插件
+
+`test7`
+
+###vue-book 用vue-cli搭建一个项目
+- 路由加载的组件就不会出现{{}}闪烁的问题了。
+- 分页面缓存 路由元信息
+
+`test8`
+##用vuex构建项目
    
   
                  

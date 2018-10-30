@@ -126,3 +126,6 @@ var arr2 = [{price:30,count:2},{price:20,count:2},{price:10,count:2}];
  * @param initValue 可选参数，累加器的初始值
  */
 // console.log(arr2.reduce(reducerCount,0))
+
+//reverse()是一个变异方法，直接改变数组。
+// arr.reverse()

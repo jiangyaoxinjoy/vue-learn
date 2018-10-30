@@ -104,5 +104,5 @@ npm install babel-core babel-loader -D
       ]
     ```  
 
-
+###vue的路由和插件
 
